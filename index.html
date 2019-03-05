@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Getting Started</title>
+    <!-- <script src="https://unpkg.com/lodash@4.16.6" async></script> -->
+    <!-- <script src="https://unpkg.com/lodash@4.16.6" defer></script> -->
+    <script src="https://unpkg.com/lodash@4.16.6" defer></script>
+    <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+    <script
+      src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"
+      defer
+    ></script>
+    <% } %>
+  </head>
+  <body></body>
+</html>
